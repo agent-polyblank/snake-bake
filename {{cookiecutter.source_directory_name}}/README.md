@@ -1,0 +1,166 @@
+<div align="center">
+  <h1>{{cookiecutter.project_name}} - {{cookiecutter.project_description}}</h1>
+  <br />
+  <br />
+  <a href="https://github.com/{{cookiecutter.author_github}}/{{cookiecutter.github_slug}}/issues/new?assignees=&labels=bug&template=1-bug-report.md&title=bug%3A+">Report a Bug</a>
+  ·
+  <a href="https://github.com/{{cookiecutter.author_github}}/{{cookiecutter.github_slug}}/issues/new?assignees=&labels=enhancement&template=4-feature-request.md&title=feat%3A+">Request a Feature</a>
+  .
+  <a href="https://github.com/{{cookiecutter.author_github}}/{{cookiecutter.github_slug}}/discussions">Ask a Question</a>
+</div>
+
+<div align="center">
+<br />
+
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
+![Ruff](https://img.shields.io/badge/ruff-3670A0?style=for-the-badge&logo=ruff&logoColor=d7ff64)
+![Pre-commit](https://img.shields.io/badge/pre--commit-3670A0?style=for-the-badge&logo=pre-commit&logoColor=fab040)
+![PyTest](https://img.shields.io/badge/pytest-3670A0?style=for-the-badge&logo=pytest&logoColor=0a9edc)
+</div>
+
+
+-----
+
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+- [Hatch Environment:](#hatch-environment)
+- [Usage](#usage)
+  - [Activating the Environment](#activating-the-environment)
+  - [Running the Application](#running-the-application)
+- [Project Structure](#project-structure)
+- [Development](#development)
+  - [Installing Dependencies](#installing-dependencies)
+  - [Linting \& Formatting](#linting--formatting)
+- [Testing](#testing)
+- [Deployment](#deployment)
+  - [Building the Package](#building-the-package)
+  - [Publishing the Package](#publishing-the-package)
+- [License](#license)
+
+## Installation
+
+```bash
+cd {{cookiecutter.project_name}}
+pip install .
+```
+
+## Hatch Environment:
+
+1. Navigate to the project directory:
+
+```bash
+cd {{cookiecutter.project_name}}
+hatch env create
+```
+
+## Usage
+
+### Activating the Environment
+
+To activate the Hatch environment, run:
+
+```bash
+hatch shell
+```
+
+### Running the Application
+
+After activating the environment, you can run your application using:
+
+```bash
+python -m {{cookiecutter.cli_name}}
+```
+
+## Project Structure
+
+The project structure follows a standard layout:
+
+```bash
+{{cookiecutter.project_name}}
+ ┣ .github
+ ┃ ┣ ISSUE_TEMPLATE
+ ┃ ┃ ┣ 1-bug-report.md
+ ┃ ┃ ┣ 2-failing-test.md
+ ┃ ┃ ┣ 3-docs-bug.md
+ ┃ ┃ ┣ 4-feature-request.md
+ ┃ ┃ ┣ 5-enhancement-request.md
+ ┃ ┃ ┣ 6-security-report.md
+ ┃ ┃ ┣ 7-question-support.md
+ ┃ ┃ ┗ config.yml
+ ┃ ┣ CODEOWNERS
+ ┃ ┣ CODE_OF_CONDUCT.md
+ ┃ ┣ CONTRIBUTING.md
+ ┃ ┣ FUNDING.yml
+ ┃ ┣ ISSUE_TEMPLATE.md
+ ┃ ┣ SECURITY.md
+ ┃ ┣ SUPPORT.md
+ ┃ ┣ config.yml
+ ┃ ┣ issue_label_bot.yaml
+ ┃ ┣ pull_request_template.md
+ ┃ ┗ settings.yml
+ ┣ src
+ ┃ ┗ {{cookiecutter.project_name}}
+ ┃ ┃ ┣ __about__.py
+ ┃ ┃ ┣ __init__.py
+ ┃ ┃ ┣ __main__.py
+ ┃ ┃ ┗ example.py
+ ┣ tests
+ ┃ ┣ __init__.py
+ ┃ ┗ test.py
+ ┣ .gitignore
+ ┣ .pre-commit-config.yaml
+ ┣ LICENSE.txt
+ ┣ README.md
+ ┗ pyproject.toml
+```
+
+## Development
+
+### Installing Dependencies
+
+To install the project dependencies, activate the Hatch environment and run:
+
+```bash
+hatch env install
+```
+
+### Linting & Formatting
+
+Run the following command to lint and format code with Ruff:
+
+```bash
+hatch fmt
+```
+
+## Testing
+
+To run tests using Pytest, execute:
+
+```bash
+hatch run test
+```
+
+## Deployment
+
+### Building the Package
+
+To build the package, run:
+
+```bash
+hatch build
+```
+
+### Publishing the Package
+
+To publish the package to PyPI, configure your credentials in `~/.pypirc` and run:
+
+```bash
+hatch publish
+```
+
+## License
+
+`python-project-template` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
