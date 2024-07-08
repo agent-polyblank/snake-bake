@@ -54,10 +54,10 @@
 
 ## Features
 
-- **Hatch**: Modern project management for Python, including environment management, testing, and packaging.
-- **Pre-configured linting:**: With ruff
-- **Pre-configured test suite**: Pytest for robust testing.
-- **Pre-commit**: Hooks for automated code checks.
+- **Hatch**: [Hatch](https://hatch.pypa.io/latest/) allows for modern project management for Python, including environment management, testing, and packaging.
+- **Pre-configured linting and formatting:**: [Ruff](https://docs.astral.sh/ruff/) for blazing fast linting and formatting.
+- **Pre-configured test suite**: [PyTest](https://docs.pytest.org/en/8.2.x/) for robust testing.
+- **Pre-commit**: [Pre-Commit Hooks](https://pre-commit.com/) for automated code checks.
 
 ## Installation
 
@@ -210,14 +210,14 @@ hatch publish
 
 ## Contributing
 
-Contribution to SnakeBake are welcomed! Please follow these steps:
+Contributions to SnakeBake are welcomed! Please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bugfix.
 3. Install pre-commit hooks
 4. Make your changes.
-5. Ensure your changes pass pre-commit
-6. Submit a pull request with a detailed description of your changes.
+5. Ensure your changes pass pre-commit and conform to the [Contributing Guidelines](./.github/CONTRIBUTING.md) and [Code of Conduct](./.github/CODE_OF_CONDUCT.md).
+6. Submit a pull request with a detailed description of your changes Pull Request template can be found [here](./.github/pull_request_template.md).
 
 ## License
 

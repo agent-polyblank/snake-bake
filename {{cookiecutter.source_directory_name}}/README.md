@@ -25,6 +25,7 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Features](#features)
 - [Installation](#installation)
 - [Hatch Environment:](#hatch-environment)
 - [Usage](#usage)
@@ -37,8 +38,15 @@
 - [Testing](#testing)
 - [Deployment](#deployment)
   - [Building the Package](#building-the-package)
-  - [Publishing the Package](#publishing-the-package)
+- [Contributing](#contributing)
 - [License](#license)
+
+## Features
+
+- **Hatch**: [Hatch](https://hatch.pypa.io/latest/) allows for modern project management for Python, including environment management, testing, and packaging.
+- **Pre-configured linting and formatting:**: [Ruff](https://docs.astral.sh/ruff/) for blazing fast linting and formatting.
+- **Pre-configured test suite**: [PyTest](https://docs.pytest.org/en/8.2.x/) for robust testing.
+- **Pre-commit**: [Pre-Commit Hooks](https://pre-commit.com/) for automated code checks.
 
 ## Installation
 
@@ -78,7 +86,7 @@ python -m {{cookiecutter.cli_name}}
 
 The project structure follows a standard layout:
 
-```bash
+```
 {{cookiecutter.project_name}}
  ┣ .github
  ┃ ┣ ISSUE_TEMPLATE
@@ -153,13 +161,16 @@ To build the package, run:
 hatch build
 ```
 
-### Publishing the Package
+## Contributing
 
-To publish the package to PyPI, configure your credentials in `~/.pypirc` and run:
+Contributions to {{cookiecutter.project_name}} are welcomed! Please follow these steps:
 
-```bash
-hatch publish
-```
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Install pre-commit hooks
+4. Make your changes.
+5. Ensure your changes pass pre-commit and conform to the [Contributing Guidelines](./.github/CONTRIBUTING.md) and [Code of Conduct](./.github/CODE_OF_CONDUCT.md).
+6. Submit a pull request with a detailed description of your changes Pull Request template can be found [here](./.github/pull_request_template.md).
 
 ## License
 
