@@ -4,7 +4,7 @@
   "author_name": "Sam King",
   "project_name": "My Project",
   "cli_name": "{{cookiecutter.project_name.lower().replace(' ', '_') }}",
-  "github_slug": "my_project",
-  "project_description": "A brief description of my project.",
+  "github_slug": "{{cookiecutter.cli_name}}",
+  "project_description": "A brief description of {{cookiecutter.project_name}}",
   "source_directory_name": "{{cookiecutter.project_name.replace(' ', '') }}"
 }

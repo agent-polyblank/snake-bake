@@ -2,7 +2,7 @@
 
 from argparse import ArgumentParser
 
-from src.test.example import greeting
+from src.example import greeting
 
 
 def main() -> None:
