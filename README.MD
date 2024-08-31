@@ -51,6 +51,7 @@
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
+- [What's Next?](#whats-next)
 
 ## Features
 
@@ -175,7 +176,7 @@ hatch fmt
 ```
 ## Testing
 
-To run tests using Pytest, execute:
+To run tests using PyTest, execute:
 
 ```bash
 hatch test
@@ -222,8 +223,6 @@ Contributions to SnakeBake are welcomed! Please follow these steps:
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
----
-
 
 ## Acknowledgments
 
@@ -231,3 +230,11 @@ Special thanks to:
 
 * [DecodeOs: Amazing Github Template](https://github.com/dec0dOS/amazing-github-template): for their excellent README.
 * [Josee9988](project-template): For their Excellent issue templates.
+
+## What's Next?
+
+* Coverage Reporting with [pytest-cov](https://pypi.org/project/pytest-cov/).
+* Project generation testing with [pytest-cookies](https://github.com/hackebrot/pytest-cookies).
+* Add optional 'Generated with SnakeBake badge'.
+* Add recommended extensions for VSCode with `settings.json`.
+* Add note on bumping version number with hatch in generated project.

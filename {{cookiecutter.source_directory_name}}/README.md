@@ -51,7 +51,7 @@
 ## Installation
 
 ```bash
-cd {{cookiecutter.project_name}}
+cd {{cookiecutter.source_directory_name}}
 pip install .
 ```
 
@@ -60,7 +60,7 @@ pip install .
 1. Navigate to the project directory:
 
 ```bash
-cd {{cookiecutter.project_name}}
+cd {{cookiecutter.source_directory_name}}
 hatch env create
 ```
 
@@ -145,7 +145,7 @@ hatch fmt
 
 ## Testing
 
-To run tests using Pytest, execute:
+To run tests using PyTest, execute:
 
 ```bash
 hatch run test
@@ -174,4 +174,4 @@ Contributions to {{cookiecutter.project_name}} are welcomed! Please follow these
 
 ## License
 
-`python-project-template` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+{{cookiecutter.project_name}} is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.

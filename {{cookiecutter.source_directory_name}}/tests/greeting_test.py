@@ -2,7 +2,7 @@
 
 import pytest
 
-from src.{{cookiecutter.cli_name}}.example import greeting
+from {{cookiecutter.cli_name}}.example import greeting
 
 @pytest.mark.parametrize(
     argnames=("name", "expected"),
