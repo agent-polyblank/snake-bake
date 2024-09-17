@@ -3,6 +3,14 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
+dependencies = ["pytest", "pytest-cov"]
+
+[project.urls]
+Documentation = "https://github.com/{{cookiecutter.author_github}}/{{cookiecutter.cli_name}}#readme"
+Issues = "https://github.com/{{cookiecutter.author_github}}/{{cookiecutter.cli_name}}#issues"
+Source = "https://github.com/{{cookiecutter.author_github}}/{{cookiecutter.cli_name}}"
+
+[tool.hatch.version]
 name = "{{cookiecutter.cli_name}}"
 dynamic = ["version"]
 description = ''
@@ -24,33 +32,22 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
-
-[project.urls]
-Documentation = "https://github.com/{{cookiecutter.author_github}}/{{cookiecutter.cli_name}}#readme"
-Issues = "https://github.com/{{cookiecutter.author_github}}/{{cookiecutter.cli_name}}#issues"
-Source = "https://github.com/{{cookiecutter.author_github}}/{{cookiecutter.cli_name}}"
-
-[tool.hatch.version]
-path = "src/python_project_template/__about__.py"
+path = "src/{{cookiecutter.cli_name}}/__about__.py"
 
 [tool.hatch.envs.types]
 extra-dependencies = ["mypy>=1.0.0"]
 [tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/python_project_template tests}"
+check = "mypy --install-types --non-interactive {args:src/{{cookiecutter.cli_name}} tests}"
 
 [tool.coverage.run]
-source_pkgs = ["python_project_template", "tests"]
+omit = ["src/{{cookiecutter.cli_name}}/__about__.py", "tests/*"]
+
+source_pkgs = ["{{cookiecutter.cli_name}}", "tests"]
 branch = true
 parallel = true
-omit = ["src/python_project_template/__about__.py"]
-
 [tool.coverage.paths]
-python_project_template = [
-  "src/python_project_template",
-  "*/python-project-template/src/python_project_template",
-]
-tests = ["tests", "*/python-project-template/tests"]
+{{cookiecutter.cli_name}} = ["src/py{{cookiecutter.cli_name}}", "*/{{cookiecutter.cli_name}}/src/py{{cookiecutter.cli_name}}"]
+tests = ["tests", "*/{{cookiecutter.cli_name}}/tests"]
 
 [tool.coverage.report]
 exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]

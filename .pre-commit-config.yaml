@@ -19,7 +19,7 @@ repos:
       name: Check for broken symlinks
     - id: check-toml
       name: Check TOML validates
-      exclude: ^{{cookiecutter.source_directory_name}}/
+      exclude: ^{{cookiecutter.cli_name}}/
     - id: check-vcs-permalinks
       name: Check for GitHub permalinks
     - id: check-xml

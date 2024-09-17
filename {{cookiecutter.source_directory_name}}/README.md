@@ -51,7 +51,7 @@
 ## Installation
 
 ```bash
-cd {{cookiecutter.source_directory_name}}
+cd {{cookiecutter.cli_name}}
 pip install .
 ```
 
@@ -60,7 +60,7 @@ pip install .
 1. Navigate to the project directory:
 
 ```bash
-cd {{cookiecutter.source_directory_name}}
+cd {{cookiecutter.cli_name}}
 hatch env create
 ```
 

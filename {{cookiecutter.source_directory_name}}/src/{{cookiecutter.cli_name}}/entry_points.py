@@ -2,7 +2,7 @@
 
 from argparse import ArgumentParser
 
-from src.example import greeting
+from src.{{cookiecutter.cli_name}}.example import greeting
 
 
 def main() -> None:
