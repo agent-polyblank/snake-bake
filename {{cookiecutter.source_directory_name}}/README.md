@@ -101,7 +101,6 @@ The project structure follows a standard layout:
  ┃ ┣ CODEOWNERS
  ┃ ┣ CODE_OF_CONDUCT.md
  ┃ ┣ CONTRIBUTING.md
- ┃ ┣ FUNDING.yml
  ┃ ┣ ISSUE_TEMPLATE.md
  ┃ ┣ SECURITY.md
  ┃ ┣ SUPPORT.md
