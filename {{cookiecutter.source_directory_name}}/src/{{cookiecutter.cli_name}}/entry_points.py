@@ -12,7 +12,7 @@ def main() -> None:
     parser.add_argument(
         "--some_arg",
         help="desc",
-        dest="arg_dest",
+        dest="greeting",
         required=True,
     )
     args = parser.parse_args()

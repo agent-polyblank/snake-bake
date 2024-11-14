@@ -96,6 +96,7 @@ exclude = [
   ".venv",
   "venv",
   "tests",
+  "__init__.py",
 ]
 
 # Same as Black.
