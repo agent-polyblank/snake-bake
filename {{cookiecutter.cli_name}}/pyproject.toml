@@ -2,15 +2,12 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[project]
-dependencies = ["pytest", "pytest-cov"]
-
 [project.urls]
 Documentation = "https://github.com/{{cookiecutter.author_github}}/{{cookiecutter.cli_name}}#readme"
 Issues = "https://github.com/{{cookiecutter.author_github}}/{{cookiecutter.cli_name}}#issues"
 Source = "https://github.com/{{cookiecutter.author_github}}/{{cookiecutter.cli_name}}"
 
-[tool.hatch.version]
+[project]
 name = "{{cookiecutter.cli_name}}"
 dynamic = ["version"]
 description = ''
@@ -32,6 +29,12 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
+dependencies = []
+
+[tool.hatch.envs.test]
+dependencies = ["pytest", "pytest-cov", "pytest-mock"]
+
+[tool.hatch.version]
 path = "src/{{cookiecutter.cli_name}}/__about__.py"
 
 [tool.hatch.envs.types]
@@ -52,9 +55,6 @@ tests = ["tests", "*/{{cookiecutter.cli_name}}/tests"]
 [tool.coverage.report]
 exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
 
-[tool.coverage.xml]
-output = "coverage.xml"
-
 [tool.hatch.build.targets.wheel]
 only-include = ["src"]
 sources = ["src"]
@@ -64,6 +64,12 @@ installer = "uv"
 
 [project.scripts]
 {{cookiecutter.cli_name}} = "{{cookiecutter.cli_name}}.entry_points:main"
+
+[tool.hatch.envs.test.scripts]
+test = "pytest {args:tests}"
+cov-xml = "pytest {args:tests} --cov=src/{{cookiecutter.cli_name}} --cov-report=xml:cov.xml"
+cov-html = "pytest {args:tests} --cov=src/{{cookiecutter.cli_name}} --cov-report=html:htmlcov"
+
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
