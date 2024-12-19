@@ -17,6 +17,7 @@ repos:
       name: Check for executables missing shebangs
     - id: check-json
       name: Check JSON validates
+      exclude: '^\.vscode/'
     - id: check-merge-conflict
       name: Check for merge conflicts
     - id: check-shebang-scripts-are-executable
@@ -43,6 +44,7 @@ repos:
       name: (Python) Check that test files end in _test.py
     - id: pretty-format-json
       name: Pretty format JSON
+      exclude: '^\.vscode/'
     - id: requirements-txt-fixer
       name: (Python) Check for canonical requirements.txt
     - id: trailing-whitespace
